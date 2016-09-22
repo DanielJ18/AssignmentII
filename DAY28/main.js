@@ -1,26 +1,54 @@
   
-    var i = 0;
+ 
+    var number = document.getElementById('num');
 
-    function changeColor() {
+
+
+    function changeColor(newColor) {
     var elem = document.getElementById('num');
-    elem.style.color = "red";
+    elem.style.color =  newColor;
+  }
+
+  function setColor()
+
+  {
+
+        if (number > 8)
+        {
+            
+            document.getElementById('num').value = number;
+            changeColor("red")
+        }
+
+        else
+        {
+             document.getElementById('num').value = number;
+             changeColor("black")
+        }
   }
    
    
 
     function plus() {
-       
-            document.getElementById('num').value = ++i;
+                                                                                                            
+          ++number;
+          setColor()
+           
     }
+
   
    
     function minus() {
-        document.getElementById('num').value = --i;
+
+        --number;
+        setColor()
+
     }
 
     
     function reset() {
-        document.getElementById('num').value = 0;
+        number = 0;  ;
+        setColor();
     }
 
     
