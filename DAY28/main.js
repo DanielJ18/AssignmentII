@@ -1,6 +1,6 @@
   
  
-    var number = document.getElementById('num');
+    var number = 0;
 
 
 
