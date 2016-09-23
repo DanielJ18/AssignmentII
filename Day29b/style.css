@@ -1,0 +1,28 @@
+
+div.container {
+    width: auto;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #4d004d;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width:  auto;
+    margin: 0;
+    padding: 1em;
+}
+
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}

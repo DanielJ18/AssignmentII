@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title></title>
+
+   <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+   <script src="./js/slackApi.js"></script>
+   <script src="./getSlackToken.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+ <body>
+
+ <div class="container">
+
+<header>
+   <h3>Slack Messaging</h3>
+</header>
+
+<nav>
+ <ul>
+<h3> CHANNELS </h3>
+  <p id="channel">  </p>
+  </ul>
+</nav>
+
+  <article>
+   <h4 id="postmsg"> Post Message </h4> <br>
+
+   <textarea id="message" cols="40" rows="5" placeholder="Enter your MESSAGE here"></textarea>
+
+   <br><br><br><br>
+    <button id="sendMessage">Send Message</button><br><br><br>
+</article>
+<footer>©Daniel</footer>  
+ </div>
+ </body>
+</html>
