@@ -19,12 +19,6 @@ angular.module("AppMode", []).controller("AppCtrl",[function(){
                }
 	 	  };
 
-	 	//   $http.get("http://localhost:8080/student")
-	 	//   .then(function(resp)) {
-	 	//   	self.students = resp.data;
-	 	//   }
-	 	// });
-
 	  self.students = [{"id":100,"firstname":"Eric","lastname":"Ephram","gpa":3.0,"sat":1200,"majorid":1, vis:true},
 	  {"id":110,"firstname":"Greg","lastname":"Gould","gpa":2.5,"sat":1100,"majorid":null, vis:true},
 	  {"id":120,"firstname":"Adam","lastname":"Ant","gpa":3.2,"sat":1300,"majorid":null, vis:true},
@@ -36,4 +30,4 @@ angular.module("AppMode", []).controller("AppCtrl",[function(){
 	  {"id":180,"firstname":"Frank","lastname":"Fountain","gpa":2.5,"sat":1000,"majorid":null, vis:true},
 	  {"id":190,"firstname":"Brian","lastname":"Biggs","gpa":2.3,"sat":950,"majorid":null, vis:true}
 	  ];
-}]); //End con
+}]); //End controller
