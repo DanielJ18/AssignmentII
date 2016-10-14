@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+.table {
+    text-align: center;
+    font-size: 22px;
+}
+input {
+    height: 32px;
+}
+#wrapper {
+        margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    background: black;
+    color: white;
+  }
+th {
+  background-color: black;
+  text-align: center;
+  color: white;
+
+}
+#function-div {
+  text-align: center;
+}
+.btn
+{
+  color: red;
+}

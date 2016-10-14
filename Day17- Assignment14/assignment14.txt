@@ -1,0 +1,67 @@
+mysql>   explain major;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| id            | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name          | varchar(50) | YES  |     | NULL    |                |
+| req_sat_score | int(11)     | YES  |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+3 rows in set (0.05 sec)
+
+mysql>   explain instructor;
++---------------------+-------------+------+-----+---------+----------------+
+| Field               | Type        | Null | Key | Default | Extra          |
++---------------------+-------------+------+-----+---------+----------------+
+| id                  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| first_name          | varchar(30) | YES  |     | NULL    |                |
+| last_name           | varchar(30) | YES  |     | NULL    |                |
+| major_id            | int(11)     | YES  | MUL | NULL    |                |
+| years_of_experience | int(11)     | YES  |     | NULL    |                |
+| is_tenured          | tinyint(4)  | YES  |     | NULL    |                |
++---------------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.05 sec)
+
+mysql> explain class;
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| id            | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name          | varchar(30) | YES  |     | NULL    |                |
+| course_number | int(11)     | YES  |     | NULL    |                |
+| instructor_id | int(11)     | YES  | MUL | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.03 sec)
+
+mysql> explain major_class_relationship;
++----------+---------+------+-----+---------+----------------+
+| Field    | Type    | Null | Key | Default | Extra          |
++----------+---------+------+-----+---------+----------------+
+| id       | int(11) | NO   | PRI | NULL    | auto_increment |
+| major_id | int(11) | NO   | MUL | NULL    |                |
+| class_id | int(11) | NO   | MUL | NULL    |                |
++----------+---------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> explain student_class_relationship;
++------------+---------+------+-----+---------+----------------+
+| Field      | Type    | Null | Key | Default | Extra          |
++------------+---------+------+-----+---------+----------------+
+| id         | int(11) | NO   | PRI | NULL    | auto_increment |
+| student_id | int(11) | NO   | MUL | NULL    |                |
+| class_id   | int(11) | NO   | MUL | NULL    |                |
++------------+---------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> explain student;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| id         | int(11)      | NO   | PRI | NULL    |       |
+| first_name | varchar(30)  | NO   |     | NULL    |       |
+| last_name  | varchar(30)  | NO   |     | NULL    |       |
+| start_date | date         | NO   |     | NULL    |       |
+| gpa        | decimal(5,1) | YES  |     | NULL    |       |
+| sat        | int(11)      | YES  |     | NULL    |       |
+| major_id   | int(11)      | YES  | MUL | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
